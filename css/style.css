@@ -1,0 +1,368 @@
+/* Configuración General y Paleta */
+:root {
+    --pink-light: #fce4ec;
+    --pink-accent: #f8bbd0;
+    --pink-medium: #f06292;
+    --pink-dark: #ad1457;
+    --text-dark: #37474f;
+    --text-light: #616161;
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.6);
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en menú */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Cursor por defecto: La rama con flores */
+    /* Asegúrate de que el nombre coincida con tu archivo en la carpeta assets */
+    cursor: url('../assets/sakura-main.png'), auto;
+}
+
+/* Cambio de cursor al pasar sobre elementos interactivos */
+a, 
+button, 
+.btn-primary, 
+.nav-links a, 
+.nav-logo, 
+.service-card, 
+.photo, 
+.mock-map {
+    /* Cursor al hacer hover: La flor sola */
+    cursor: url('../assets/sakura-hover.png'), pointer !important;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; /* Profesional, limpia, redonda */
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Fondo Sakura Fijo */
+    background: linear-gradient(rgba(252, 228, 236, 0.6), rgba(252, 228, 236, 0.6)), 
+                url('https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=1920') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Tipografía Cursiva */
+.cursive {
+    font-family: 'Great Vibes', cursive;
+}
+
+.text-center { text-align: center; }
+
+/* Estilos de Efecto Vidrio */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 15px rgba(173, 20, 87, 0.05);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(173, 20, 87, 0.1);
+}
+
+/* Barra de Navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--pink-dark);
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: var(--pink-medium);
+    border-bottom: 2px solid var(--pink-medium);
+}
+
+/* Sección Héroe (Inicio) */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: var(--pink-dark);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--pink-medium);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Botón Primary */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--pink-medium);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(240, 98, 146, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(173, 20, 87, 0.4);
+}
+
+/* Estilos de Sección Comunes */
+.section-container {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 4rem;
+    color: var(--pink-dark);
+    margin-bottom: 40px;
+}
+
+/* Grid de Nosotros */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.text-block h3 {
+    color: var(--pink-medium);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.text-block p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* Grid de Catálogo (Cartas más llenas) */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4 {
+    color: var(--pink-dark);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Galería y Contacto (Mejoras estéticas) */
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Busca esta parte en tu código y asegúrate de que tenga el !important */
+.photo:hover {
+    transform: scale(1.05) rotate(2deg); /* Un zoom más suave se ve más elegante */
+    box-shadow: 0 10px 20px rgba(173, 20, 87, 0.2);
+}
+
+/* Añade esto para que los textos no se puedan seleccionar 
+   y la página se sienta más como una aplicación/app */
+body {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Permite seleccionar texto solo en las descripciones si es necesario */
+p {
+    user-select: text;
+}
+
+/* Contacto y Mapa */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.mock-map {
+    width: 100%;
+    height: 300px;
+    background: #e1f5fe;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink-dark);
+    font-weight: bold;
+    border: 2px dashed var(--pink-accent);
+}
+
+/* Footer Final */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+    margin-top: 50px;
+}
+
+/* Animaciones y Pétalos */
+.sakura-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 999;
+}
+
+.petal {
+    position: absolute;
+    /* Cambia de 12px a 20px o 25px para que sean más grandes */
+    width: 22px; 
+    height: 22px;
+    
+    /* Un color rosa un poco más vibrante para que resalte del fondo */
+    background: #ffb7c5; 
+    
+    /* Mantenemos la forma de pétalo */
+    border-radius: 150% 0 150% 0;
+    top: -20px;
+    
+    /* Agregamos una ligera sombra para que tengan profundidad */
+    box-shadow: 1px 1px 5px rgba(255, 182, 197, 0.5);
+    
+    animation: fall linear forwards;
+    pointer-events: none; /* Importante para que no estorben al hacer clic */
+}
+
+
+.map-container {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--pink-accent);
+}
+
+/* Para que las 3 cartas del catálogo se vean uniformes */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 900px) {
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) translateX(80px) rotate(360deg); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animation-fadeIn { animation: fadeInDown 1.5s ease; }
