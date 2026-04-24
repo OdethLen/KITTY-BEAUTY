@@ -366,3 +366,60 @@ p {
 }
 
 .animation-fadeIn { animation: fadeInDown 1.5s ease; }
+
+
+/* Estilos para la sección de Garantía */
+.guarantee-box {
+    text-align: center;
+    padding: 60px 40px;
+    border: 2px solid var(--pink-accent); /* Resalta un poco más que las otras tarjetas */
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.guarantee-title {
+    font-size: 3.5rem;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+}
+
+.guarantee-text {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+}
+
+.icon-sparkle {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Etiquetas o Badges */
+.badges-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid var(--pink-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto al pasar el mouse por la sección */
+.guarantee-box:hover {
+    box-shadow: 0 15px 45px rgba(240, 98, 146, 0.2);
+    transform: scale(1.02);
+    transition: all 0.5s ease;
+}
